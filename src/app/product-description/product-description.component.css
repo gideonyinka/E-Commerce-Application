@@ -1,0 +1,31 @@
+.center .btn{
+    font-size: 16px !important;
+    margin-top:20px !important;
+    font-weight: 400;
+    padding:12px 72px;
+    border-radius: 3px !important
+  }
+  
+  .card{
+    height: 90vh;
+    margin: 25px;
+    padding:25px;
+  }
+ .description{
+    position:absolute;
+    top:50%;
+    left:60%;
+    text-align: center;
+ }
+
+  img{
+    position:absolute;
+    top:25%;
+    left:30%;
+    transform:translate(-50, -50%);
+    text-align:center;
+    width: 400px;
+    padding: 10px;     
+    border: 1px solid #0095ff;
+  }
+

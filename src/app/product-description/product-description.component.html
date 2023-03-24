@@ -1,0 +1,17 @@
+<ng-container *ngFor="let item of productsDescript; let i = index" >
+    <div class="container" >
+        <div class="card">
+            <h5 class="card-title">Product Description Page</h5>
+        </div>
+        <div class="center">
+            <img src="{{item.url}}"  alt=""/>
+           <div class="description">
+                <h6 style ="font-weight:bold; font-size:30px">{{item.name}}</h6>
+                <h6 style = "font-size:18px; padding:5px">${{item.price}}</h6>
+                <h6>{{item.description}}</h6>
+                <button routerLink="/" class="btn btn-primary">Shop now</button>
+            </div> 
+        </div>
+    </div>
+
+</ng-container>

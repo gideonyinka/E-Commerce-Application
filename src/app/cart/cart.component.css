@@ -1,0 +1,54 @@
+.card-table{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap:break-word;
+  background:#fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius:.25rem;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items:flex-start;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 10px;
+}
+
+
+table td, th {
+  padding: 30px;
+  white-space: nowrap;
+}
+
+.center .btn{
+  font-size: 16px !important;
+  margin-top:20px !important;
+  font-weight: 400;
+  padding:12px 72px;
+  border-radius: 3px !important
+}
+
+.card{
+  height: 60vh;
+  margin: 25px;
+  padding:25px;
+}
+.center{
+  position:absolute;
+  top:30%;
+  left:40%;
+  transform:translate(-50, -50%);
+  text-align:center;
+}
+
+.btn-danger{
+  background-color: #ff0f0f;
+  border: 1px solid #ff0a0a;
+  border-width: 2px;
+
+}

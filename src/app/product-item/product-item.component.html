@@ -1,0 +1,15 @@
+<div class ="product-container ">
+        <div >
+                <div class = "card product-image"><img routerLink="/app-product-description" [src]="product.url" (click)="checkImage(product)" alt="images"></div>
+
+                <div class="select-input"> <div id="name"><a>{{product.name}}</a></div>
+                        <div id="price">${{product.price}}</div>
+                        <button class="btn btn-primary" (click) = "addToCartAlert(product)" (click)="addtocart(product)">Add to Cart</button>
+                </div>
+        </div>
+</div>
+
+<!-- <ng-container *ngIf="product.url = ">
+
+</ng-container> -->
+

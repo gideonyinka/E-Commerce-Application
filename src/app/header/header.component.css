@@ -1,0 +1,42 @@
+/* .header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+    margin-top:0;
+    font-family:"helvetica Neue", Arial, Helvetica, sans-serif; 
+  }
+  
+  a {
+    color: #ffffff;
+  }
+
+  h1{
+    font-size: 40px;
+  } */
+
+  .control-form{
+    border-radius:5px;
+    border-color:1px solid blue;
+    width:600px;
+    margin-left:30px;
+    font-size: medium;
+    margin-top: 15px;
+  }
+
+  .search-icon{
+    position:absolute;
+    z-index:10;
+    right:52%;
+    top:34px;
+    color:blue;
+    font-size: 16px;
+  }
+
+  .btn-primary{
+    position:absolute;
+    z-index:10;
+    right:2%;
+    top:30px;
+    color:rgb(255, 255, 255)
+  }

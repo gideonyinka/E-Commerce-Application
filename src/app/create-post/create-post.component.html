@@ -1,0 +1,60 @@
+<ng-container *ngIf="addingProduct.length != 0">
+    <form #form ="ngForm" class= "container" action="submit form" (ngSubmit)="submitForm()">
+        <h4>Please, Enter Your Details Below</h4>
+        <br>
+        <input class = "form-input" type="text" name="firstname" required minlength="2" required maxlength="32" placeholder="Enter your first name" [(ngModel)]="firstName" (ngModelChange)="firstNameChange($event)" #InputFirstName = "ngModel"/>
+        <br>
+        <input class = "form-input" type="text" name="lastname" required minlength="2" required maxlength="32" placeholder="Enter your last name" [(ngModel)]="lastName" (ngModelChange)="lastNameChange($event)" #InputLastName = "ngModel">
+        <br>
+        <input class = "form-input" type="email" name="email" id="email" required placeholder="email" email="true" [(ngModel)]="email"  (ngModelChange)="emailChange($event)" #InputEmail = "ngModel">
+        <br>
+        <input class = "form-input" type="password" name="password" id="password" required minlength="4"  required maxlength="15" placeholder="password" [(ngModel)]="password" (ngModelChange)="passwordChange($event)" #InputPassword = "ngModel">
+        <br>
+        <input (click)="deleteAllItem()" [disabled]= "form.invalid" type="submit" value="submit" class="btn btn-primary">
+
+        <div *ngIf = "InputFirstName.invalid && InputFirstName.dirty">
+            <div *ngIf = "InputFirstName.errors?.['required']">
+                Please provide first name
+            </div>
+            <div *ngIf ="InputFirstName.errors?.['minlength']">
+                 First name must possess at least 2 characters
+            </div>
+        </div>
+
+        <div *ngIf="InputLastName.invalid && InputLastName.dirty">
+            <div *ngIf="InputLastName.errors?.['required']">
+                Please provide last name 
+            </div>
+            <div *ngIf="InputLastName.errors?.['minlength']">
+                Last name must possess at least 2 characters
+            </div>
+        </div>
+
+        <div *ngIf = "InputEmail.invalid && InputEmail.dirty">
+            <div *ngIf="InputEmail.errors?.['email']">
+                Email format is invalid
+            </div>
+        </div>
+
+        
+        <div *ngIf = "InputPassword.invalid && InputPassword.dirty">
+            <div *ngIf = "InputPassword.errors?.['password']">
+                password format is invalid
+            </div>
+            <div *ngIf = "InputPassword.errors?.['minlength']">
+                 Password must possess at least 4 characters
+            </div>
+        </div>
+        
+    </form>
+</ng-container>
+<ng-container *ngIf="addingProduct.length == 0">
+    <div class = "message"><p>Dear {{firstName}},</p>
+    <p>Your order is successfully created.</p>
+    <p>Thank you for your patronage</p>
+    </div>
+    <a routerLink="/"> <i class="fa fas-arrow"></i>Click here to shop more!</a>
+</ng-container>
+
+
+
